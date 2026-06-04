@@ -1,0 +1,234 @@
+/* Retail & E-commerce Industry Page Styles with Dark Theme */
+:root {
+  --bg-main: #f8fafc;
+  --text-main: #1a202c;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-shadow: 0 4px 32px rgba(30, 41, 59, 0.08);
+  --overlay-bg: rgba(30, 41, 59, 0.45);
+}
+.dark-theme {
+  --bg-main: #181c24;
+  --text-main: #f3f6fa;
+  --card-bg: rgba(30, 34, 44, 0.85);
+  --card-shadow: 0 4px 32px #87cefa22;
+  --overlay-bg: rgba(30, 41, 59, 0.65);
+}
+.industry-page {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg-main);
+  min-height: 100vh;
+  color: var(--text-main);
+}
+.industry-hero {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0 0 2rem 2rem;
+  margin-bottom: 2rem;
+}
+.industry-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) blur(1px);
+}
+.industry-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: var(--overlay-bg);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+}
+.industry-hero-overlay h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.industry-hero-overlay p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.industry-solutions {
+  padding: 2rem 1rem 1rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.industry-solutions h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+}
+/* --- Solution Card: Image on Top, Wider Card, Centered Content --- */
+.industry-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+/* --- Creative & Innovative Solution Card --- */
+.solution-card {
+  background: rgba(30, 34, 44, 0.85);
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.18),
+    0 2px 8px #facc1533;
+  border-radius: 1.5rem;
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 240px;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+  transition:
+    transform 0.22s cubic-bezier(0.4, 2, 0.6, 1),
+    box-shadow 0.22s,
+    border 0.22s;
+  border: 2px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+.solution-card::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  height: 7px;
+  border-radius: 1.5rem 1.5rem 0 0;
+  background: linear-gradient(90deg, #facc15 0%, #00bfff 100%);
+  z-index: 2;
+  opacity: 0.85;
+}
+.solution-card:hover,
+.solution-card:focus {
+  transform: translateY(-8px) scale(1.045);
+  box-shadow:
+    0 16px 48px 0 #facc1544,
+    0 4px 24px #00bfff33;
+  border: 2px solid #facc15;
+}
+.solution-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #f1f5f9;
+  margin-bottom: 1.1rem;
+  display: block;
+  box-shadow:
+    0 4px 24px #00bfff33,
+    0 2px 8px #facc1533;
+  transition:
+    transform 0.22s cubic-bezier(0.4, 2, 0.6, 1),
+    box-shadow 0.22s;
+  z-index: 3;
+  position: relative;
+}
+.solution-card:hover img {
+  transform: translateY(-8px) scale(1.08) rotate(-6deg);
+  box-shadow:
+    0 12px 32px #facc1555,
+    0 4px 16px #00bfff55;
+}
+.solution-card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 4;
+}
+.solution-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+  text-align: center;
+  letter-spacing: 0.01em;
+  background: linear-gradient(90deg, #facc15 0%, #00bfff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.solution-card p {
+  font-size: 1.05rem;
+  color: var(--text-main);
+  text-align: center;
+  margin: 0;
+  opacity: 0.92;
+  line-height: 1.5;
+}
+.industry-benefits {
+  margin: 2rem auto 2rem auto;
+  max-width: 700px;
+  background: var(--card-bg);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px #87cefa22;
+  padding: 2rem 1.5rem;
+  backdrop-filter: blur(6px);
+}
+.industry-benefits h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+.industry-benefits ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+.industry-benefits li {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+@media (max-width: 900px) {
+  .industry-solutions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+  }
+  .solution-card {
+    max-width: 100%;
+    min-height: 160px;
+    padding: 1.1rem 0.7rem 0.7rem 0.7rem;
+  }
+  .solution-card img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .industry-solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+  .solution-card {
+    min-height: 120px;
+    padding: 0.7rem 0.3rem 0.5rem 0.3rem;
+  }
+  .solution-card img {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 0.5rem;
+  }
+  .solution-card h3 {
+    font-size: 1.05rem;
+  }
+  .solution-card p {
+    font-size: 0.97rem;
+  }
+}
